@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eskilstuna Färdtjänst – Boka resa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand__name">Eskilstuna Färdtjänst</div>
+        <div class="brand__sub">Bokning via Sörmlandstrafiken</div>
+      </div>
+
+      <nav class="nav" aria-label="Huvudmeny">
+        <ul id="nav-list" class="nav__list">
+          <li><a href="index.html">Start</a></li>
+          <li><a aria-current="page" href="boka.html">Boka resa</a></li>
+          <li><a href="aterkommande.html">Återkommande</a></li>
+          <li><a href="mina.html">Mina bokningar</a></li>
+          <li><a href="info.html">Om färdtjänst</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="tillganglighet.html">Tillgänglighet</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Boka resa</h1>
+          <p class="muted">Fyll i uppgifter. Du får en tydlig bekräftelse när bokningen är klar.</p>
+        </div>
+
+        <div class="grid-2">
+          <form id="singleForm" class="card form" aria-describedby="singleHelp">
+            <p id="singleHelp" class="small-note">
+              Alla fält markerade med <span aria-hidden="true">*</span> är obligatoriska.
+            </p>
+
+            <div class="field">
+              <label for="s_from">Från adress <span class="req" aria-hidden="true">*</span></label>
+              <input id="s_from" name="from" autocomplete="street-address" required />
+              <div class="error" id="err_s_from" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label for="s_to">Till adress <span class="req" aria-hidden="true">*</span></label>
+              <input id="s_to" name="to" required />
+              <div class="error" id="err_s_to" aria-live="polite"></div>
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="s_date">Datum <span class="req" aria-hidden="true">*</span></label>
+                <input id="s_date" name="date" type="date" required />
+                <div class="error" id="err_s_date" aria-live="polite"></div>
+              </div>
+
+              <div class="field">
+                <label for="s_time">Tid <span class="req" aria-hidden="true">*</span></label>
+                <input id="s_time" name="time" type="time" required />
+                <div class="error" id="err_s_time" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>Extra behov</legend>
+              <div class="check">
+                <input id="s_escort" name="escort" type="checkbox" />
+                <label for="s_escort">Jag reser med ledsagare</label>
+              </div>
+              <div class="check">
+                <input id="s_wheelchair" name="wheelchair" type="checkbox" />
+                <label for="s_wheelchair">Jag behöver rullstolsanpassat fordon</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="s_note">Meddelande till chaufför (valfritt)</label>
+              <textarea id="s_note" name="note" rows="3" placeholder="Till exempel portkod eller var du väntar."></textarea>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Bekräfta bokning</button>
+              <button class="btn btn-ghost" type="reset">Rensa</button>
+            </div>
+
+            <div class="status" id="singleStatus" aria-live="polite"></div>
+          </form>
+
+          <aside class="card info-box" aria-label="Viktig information">
+            <h2 class="h3">Viktigt att veta</h2>
+            <ul class="bullets">
+              <li>Boka i god tid så att resan kan planeras.</li>
+              <li>Du kan ändra eller avboka i <a href="mina.html">Mina bokningar</a>.</li>
+              <li>Om du behöver hjälp, se <a href="kontakt.html">Kontakt</a>.</li>
+            </ul>
+            <hr />
+            <p class="muted small-note">
+              Demo för skolarbete. I en riktig tjänst sker inloggning och koppling till trafikutörare.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© Eskilstuna Färdtjänst • <a href="index.html">Till start</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

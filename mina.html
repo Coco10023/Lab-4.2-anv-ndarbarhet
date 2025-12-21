@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eskilstuna Färdtjänst – Mina bokningar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand__name">Eskilstuna Färdtjänst</div>
+        <div class="brand__sub">Bokning via Sörmlandstrafiken</div>
+      </div>
+
+      <nav class="nav" aria-label="Huvudmeny">
+        <ul id="nav-list" class="nav__list">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="boka.html">Boka resa</a></li>
+          <li><a href="aterkommande.html">Återkommande</a></li>
+          <li><a aria-current="page" href="mina.html">Mina bokningar</a></li>
+          <li><a href="info.html">Om färdtjänst</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="tillganglighet.html">Tillgänglighet</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Mina bokningar</h1>
+          <p class="muted">Här ser du kommande resor. Du kan ändra tid eller avboka.</p>
+        </div>
+
+        <div class="card">
+          <div class="table-toolbar">
+            <button class="btn btn-secondary" id="seedBtn" type="button">Skapa exempelbokningar</button>
+            <button class="btn btn-ghost" id="clearBtn" type="button">Rensa alla</button>
+          </div>
+
+          <div class="table-wrap" role="region" aria-label="Lista över bokningar" tabindex="0">
+            <table class="table" aria-describedby="tableHelp">
+              <caption class="sr-only">Kommande bokningar</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Datum</th>
+                  <th scope="col">Tid</th>
+                  <th scope="col">Från</th>
+                  <th scope="col">Till</th>
+                  <th scope="col">Typ</th>
+                  <th scope="col">Åtgärder</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                  <tr>
+                    <td>2026-01-10</td>
+                    <td>10:30</td>
+                    <td>Hemadress</td>
+                    <td>Vårdcentralen</td>
+                    <td>Enstaka</td>
+                    <td>
+                      <a class="btn btn-ghost" href="#" aria-disabled="true">Ändra</a>
+                      <a class="btn btn-ghost" href="#" aria-disabled="true">Avboka</a>
+                    </td>
+                  </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <p id="tableHelp" class="small-note muted">
+            “Ändra” öppnar ett formulär där du kan uppdatera datum/tid. “Avboka” tar bort resan.
+          </p>
+
+          <div class="status" id="bookingsStatus" aria-live="polite"></div>
+        </div>
+
+        <dialog id="editDialog" class="dialog">
+          <form id="editForm" method="dialog" class="form">
+            <h2 class="h3">Ändra bokning</h2>
+            <p class="muted small-note" id="editHelp">Uppdatera datum och tid. Övriga uppgifter behålls.</p>
+
+            <input type="hidden" id="e_id" name="id" />
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="e_date">Datum <span class="req" aria-hidden="true">*</span></label>
+                <input id="e_date" name="date" type="date" required />
+                <div class="error" id="err_e_date" aria-live="polite"></div>
+              </div>
+
+              <div class="field">
+                <label for="e_time">Tid <span class="req" aria-hidden="true">*</span></label>
+                <input id="e_time" name="time" type="time" required />
+                <div class="error" id="err_e_time" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" value="save" type="submit">Spara ändring</button>
+              <button class="btn btn-ghost" value="cancel" type="button" id="cancelEdit">Avbryt</button>
+            </div>
+
+            <div class="status" id="editStatus" aria-live="polite"></div>
+          </form>
+        </dialog>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© Eskilstuna Färdtjänst • <a href="index.html">Till start</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
