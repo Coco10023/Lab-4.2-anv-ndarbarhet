@@ -12,16 +12,16 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
+      <a class="brand" href="index.html">
         <div class="brand__name">Eskilstuna Färdtjänst</div>
         <div class="brand__sub">Bokning via Sörmlandstrafiken</div>
-      </div>
+      </a>
 
       <nav class="nav" aria-label="Huvudmeny">
         <ul id="nav-list" class="nav__list">
           <li><a href="index.html">Start</a></li>
           <li><a href="boka.html">Boka resa</a></li>
-          <li><a aria-current="page" href="aterkommande.html">Återkommande</a></li>
+          <li><a aria-current="page" href="aterkommande.html">Återkommande resor</a></li>
           <li><a href="mina.html">Mina bokningar</a></li>
           <li><a href="info.html">Om färdtjänst</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -90,6 +90,32 @@
               </div>
             </div>
 
+            <div class="field">
+              <label for="weekday">Veckodag (vid veckovis resa)</label>
+              <select id="weekday" name="weekday">
+                <option value="">Välj…</option>
+                <option>Måndag</option>
+                <option>Tisdag</option>
+                <option>Onsdag</option>
+                <option>Torsdag</option>
+                <option>Fredag</option>
+              </select>
+            </div>
+
+            <div class="field">
+            <label for="monthly">Veckodag (vid månadsvis resa)</label>
+              <select id="monthly" name="monthly">
+                <option value="">Välj…</option>
+                <option>Måndag</option>
+                <option>Tisdag</option>
+                <option>Onsdag</option>
+                <option>Torsdag</option>
+                <option>Fredag</option>
+              </select>
+            </div>
+
+
+
             <fieldset class="field">
               <legend>Extra behov</legend>
               <div class="check">
@@ -126,6 +152,14 @@
       </div>
     </section>
   </main>
+
+  <div class="field">
+    <label for="r_note">Meddelande till chaufför (valfritt)</label>
+    <textarea id="r_note" name="note" rows="3"
+      placeholder="Till exempel rullator, servicehund eller behov av assistans.">
+    </textarea>
+  </div>
+
 
   <footer class="site-footer">
     <div class="container footer-inner">
