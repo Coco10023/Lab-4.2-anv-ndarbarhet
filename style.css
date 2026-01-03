@@ -393,7 +393,6 @@ hr {
 }
 
 
-
 /* Media queries */
 @media (max-width: 900px) {
 
@@ -407,14 +406,14 @@ hr {
 
   .nav__list {
     display: flex;
-    position: static;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 8px;
     flex-direction: column;
-    min-width: 220px;
     box-shadow: var(--shadow);
     gap: 4px;
+    margin: 0;
+    list-style: none;
   }
 }
