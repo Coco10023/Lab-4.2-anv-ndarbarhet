@@ -396,20 +396,18 @@ hr {
 
 /* Media queries */
 @media (max-width: 900px) {
+
   .hero-inner { 
     grid-template-columns: 1fr; 
   }
+
   .grid-2 { 
     grid-template-columns: 1fr; 
   }
-  .nav__toggle { 
-    display: none; 
-  }
+
   .nav__list {
     display: flex;
     position: static;
-    right: 16px;
-    top: 64px;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -419,5 +417,4 @@ hr {
     box-shadow: var(--shadow);
     gap: 4px;
   }
-  .nav__list.is-open{ display:flex; }
 }
