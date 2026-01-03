@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eskilstuna Färdtjänst – Återkommande resa</title>
+  <title>Eskilstuna Färdtjänst - Återkommande resa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -48,26 +48,22 @@
             <div class="field">
               <label for="r_from">Från adress <span class="req" aria-hidden="true">*</span></label>
               <input id="r_from" name="from" required />
-              <div class="error" id="err_r_from" aria-live="polite"></div>
             </div>
 
             <div class="field">
               <label for="r_to">Till adress <span class="req" aria-hidden="true">*</span></label>
               <input id="r_to" name="to" required />
-              <div class="error" id="err_r_to" aria-live="polite"></div>
             </div>
 
             <div class="grid-2">
               <div class="field">
                 <label for="r_start">Startdatum <span class="req" aria-hidden="true">*</span></label>
                 <input id="r_start" name="start" type="date" required />
-                <div class="error" id="err_r_start" aria-live="polite"></div>
               </div>
 
               <div class="field">
                 <label for="r_end">Slutdatum <span class="req" aria-hidden="true">*</span></label>
                 <input id="r_end" name="end" type="date" required />
-                <div class="error" id="err_r_end" aria-live="polite"></div>
               </div>
             </div>
 
@@ -75,7 +71,6 @@
               <div class="field">
                 <label for="r_time">Tid <span class="req" aria-hidden="true">*</span></label>
                 <input id="r_time" name="time" type="time" required />
-                <div class="error" id="err_r_time" aria-live="polite"></div>
               </div>
 
               <div class="field">
@@ -86,7 +81,6 @@
                   <option value="veckovis">En gång i veckan</option>
                   <option value="manadsvis">En gång i månaden</option>
                 </select>
-                <div class="error" id="err_r_frequency" aria-live="polite"></div>
               </div>
             </div>
 
@@ -103,18 +97,12 @@
             </div>
 
             <div class="field">
-            <label for="monthly">Veckodag (vid månadsvis resa)</label>
-              <select id="monthly" name="monthly">
-                <option value="">Välj…</option>
-                <option>Måndag</option>
-                <option>Tisdag</option>
-                <option>Onsdag</option>
-                <option>Torsdag</option>
-                <option>Fredag</option>
-              </select>
+              <label for="r_monthday">Dag i månaden (vid månadsvis resa)</label>
+              <input id = "r_monthday" name="r_monthday" type="date">
+              <p class="small-note muted">Används bara om du väljer “En gång i månaden”. 
+              Välj ett datum, t.ex. 2026-02-10 (den 10:e varje månad).
+            </p>
             </div>
-
-
 
             <fieldset class="field">
               <legend>Extra behov</legend>
@@ -134,6 +122,13 @@
             </div>
 
             <div class="status" id="repeatStatus" aria-live="polite"></div>
+
+            <div class="field">
+              <label for="r_note">Meddelande till chaufför (valfritt)</label>
+              <textarea id="r_note" name="note" rows="3"
+                placeholder="Till exempel rullator, servicehund eller behov av assistans.">
+              </textarea>
+            </div>
           </form>
 
           <aside class="card info-box">
@@ -152,14 +147,6 @@
       </div>
     </section>
   </main>
-
-  <div class="field">
-    <label for="r_note">Meddelande till chaufför (valfritt)</label>
-    <textarea id="r_note" name="note" rows="3"
-      placeholder="Till exempel rullator, servicehund eller behov av assistans.">
-    </textarea>
-  </div>
-
 
   <footer class="site-footer">
     <div class="container footer-inner">
