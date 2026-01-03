@@ -14,6 +14,8 @@
   --space: 16px;
   --max: 1100px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  --danger: #b42318;
+  --danger-contrast: #ffffff;
 }
 
 * { 
@@ -375,6 +377,21 @@ hr {
 .section .card h3 {
   margin-top: 0;
 }
+
+
+/* Förtydliga ändra och ta bort knappar */
+.btn-edit {
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border: 1px solid transparent;
+}
+
+.btn-danger {
+  background: #b42318;           /* tydlig röd */
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
 
 
 /* Media queries */
