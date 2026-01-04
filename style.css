@@ -98,7 +98,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   background: var(--bg);
   padding: 10px 12px;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 800;
+  cursor: pointer;
+  min-height: 44px;
 }
 .nav__list{
   list-style:none;
@@ -393,42 +395,6 @@ hr {
 }
 
 
-/* Hamburgermeny – CSS only */
-.nav-details {
-  position: relative;
-}
-
-.nav-summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  font-weight: 800;
-  background: var(--bg);
-}
-
-.nav-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Desktop: visa menyn alltid, dölj summary */
-@media (min-width: 901px) {
-  .nav-summary {
-    display: none;
-  }
-
-  .nav-details {
-    display: block;
-  }
-
-  .nav__list {
-    display: flex;
-    gap: 10px;
-  }
-}
-
-
 /* Media queries */
 @media (max-width: 900px) {
 
@@ -441,7 +407,7 @@ hr {
   }
 
   .nav__list {
-    display: flex;
+    display: none;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -450,5 +416,28 @@ hr {
     box-shadow: var(--shadow);
     margin-top: 8px;
     list-style: none;
+    gap: 4px;
+  }
+
+  .nav__toggle{
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav__list.is-open {
+    display: flex;
   }
 }
+
+@media (min-width: 901px) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex !important;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+

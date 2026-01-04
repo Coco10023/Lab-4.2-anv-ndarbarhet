@@ -18,19 +18,25 @@
       </a>
 
       <nav class="nav" aria-label="Huvudmeny">
-        <details class = "nav-details" open>
-          <summary class = "nav-summary">☰ Meny</summary>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-list"
+          id="navToggle"
+          aria-label="Öppna meny">
+          ☰ Meny
+        </button>
 
-        <ul id="nav-list" class="nav__list">
-          <li><a aria-current="page" href="index.html">Start</a></li>
-          <li><a href="boka.html">Boka resa</a></li>
-          <li><a href="aterkommande.html">Återkommande resor</a></li>
-          <li><a href="mina.html">Mina bokningar</a></li>
-          <li><a href="info.html">Om färdtjänst</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-          <li><a href="tillganglighet.html">Tillgänglighet</a></li>
-        </ul>
-        </details>
+          <ul id="nav-list" class="nav__list">
+            <li><a aria-current="page" href="index.html">Start</a></li>
+            <li><a href="boka.html">Boka resa</a></li>
+            <li><a href="aterkommande.html">Återkommande resor</a></li>
+            <li><a href="mina.html">Mina bokningar</a></li>
+            <li><a href="info.html">Om färdtjänst</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="tillganglighet.html">Tillgänglighet</a></li>
+          </ul>
       </nav>
     </div>
   </header>
@@ -115,6 +121,8 @@
       <p>© Eskilstuna Färdtjänst • <a href="index.html">Till start</a></p>
     </div>
   </footer>
+
+  <script src="main.js" defer></script>
 
 </body>
 </html>
