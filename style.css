@@ -435,7 +435,7 @@ hr {
   }
 
   .nav__list {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     gap: 10px;
   }

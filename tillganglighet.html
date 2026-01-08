@@ -24,19 +24,18 @@
           type="button"
           aria-expanded="false"
           aria-controls="nav-list"
-          id="navToggle"
-          aria-label="Öppna meny">
+          id="navToggle">
           ☰ Meny
         </button>
 
           <ul id="nav-list" class="nav__list">
-            <li><a aria-current="page" href="index.html">Start</a></li>
+            <li><a href="index.html">Start</a></li>
             <li><a href="boka.html">Boka resa</a></li>
             <li><a href="aterkommande.html">Återkommande resor</a></li>
             <li><a href="mina.html">Mina bokningar</a></li>
             <li><a href="info.html">Om färdtjänst</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighet</a></li>
+            <li><a aria-current="page" href="tillganglighet.html">Tillgänglighet</a></li>
           </ul>
       </nav>
     </div>
@@ -59,7 +58,10 @@
             <ul class="bullets">
               <li>Du kan navigera med tangentbord (Tabb för att gå framåt, Shift+Tabb för att gå bakåt).</li>
               <li>Text och knappar är tydliga och har god kontrast.</li>
-              <li>Formulär har etiketter och visar felmeddelanden om något saknas.</li>
+              <li>Formulären använder webbläsarens inbyggda validering för obligatoriska fält. Webbplatsen 
+              är en prototyp utan backend och gör därför ingen fullständig kontroll av regler, till exempel 
+              att ett datum inte ligger i det förflutna.
+            </li>
               <li>De viktigaste funktionerna finns i menyn: Boka, Återkommande och Mina bokningar.</li>
               <li>Sidan fungerar på mobil och dator utan att behöva zooma i sidled.</li>
             </ul>
