@@ -8,7 +8,7 @@
   --primary-contrast: #ffffff;
   --secondary: #0f766e;
   --secondary-contrast: #ffffff;
-  --focus: #ffbf47;
+  --focus: #000000;
   --shadow: 0 1px 8px rgba(0,0,0,.08);
   --radius: 14px;
   --space: 16px;
@@ -23,7 +23,7 @@
 }
 
 html { 
-    scroll-behavior: smooth; 
+    scroll-behavior: auto; 
 }
 
 body {
