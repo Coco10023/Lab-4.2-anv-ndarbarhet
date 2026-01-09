@@ -50,17 +50,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border-radius: 6px;
 }
 
-.skip-link{
+.skip-link {
   position:absolute;
   left:-999px;
   top:8px;
   background: var(--focus);
-  color: #000;
+  color: #fff;
   padding: 10px 12px;
   border-radius: 8px;
   z-index: 1000;
 }
-.skip-link:focus{ left: 12px; }
+.skip-link:focus { 
+  left: 12px; 
+}
 
 .site-header{
   position: sticky;
